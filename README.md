@@ -1,20 +1,14 @@
-# funciones
+# Funciones Personalizadas
+Este repositorio contiene un conjunto de funciones personalizadas creadas para abordar distintos problemas y facilitar tareas específicas. Estas funciones están diseñadas para ser reutilizables, eficientes y proporcionar soluciones claras para diversas situaciones.
 
-""" Este es un programa que pide al usuario una cantidad de dinero en pesos, una tasa de interés (un número decimal mayor a 0) y un número de años. Muestra por pantalla en cuánto se habrá convertido el capital inicial transcurridos esos años si cada año se aplica la tasa de interés introducida. Recuerde que un capital de C pesos a un interés del x por cien durante n años se convierten en C×(1+x/100)n
- pesos. Pruebe su programa sabiendo que una cantidad de 10,000 pesos al 4.5 % de interés anual se convierte en 24117.14 pesos al cabo de 20 años"""
+Objetivo
+El propósito principal de este repositorio es ofrecer un conjunto de herramientas funcionales que simplifiquen y mejoren los procesos en el desarrollo de proyectos. Estas funciones han sido creadas para resolver desafíos comunes y pueden adaptarse fácilmente a distintos contextos y necesidades específicas.
 
- def calcular_interes():
-     try:
-         capital = float(input("Ingrese la cantidad de dinero en pesos: "))
-         tasa_interes = float(input("Ingrese la tasa de interés (en decimal, por ejemplo, 0.045 para 4.5%): "))
-         anos = int(input("Ingrese el número de años: "))
- 
-         capital_final = capital * (1 + tasa_interes) ** anos
- 
-         print(f"Después de {anos} años, el capital inicial de {capital} pesos con una tasa de interés del {tasa_interes * 100}%")
-         print(f"se convierte en {capital_final:.2f} pesos.")
- 
-     except ValueError:
-         print("Por favor, ingrese valores numéricos válidos.")
- 
- calcular_interes()
+Contenido
+En este repositorio, encontrarás:
+
+Una colección diversa de funciones programadas en Python.
+Una documentación clara y detallada de cada función, que incluye su propósito, parámetros de entrada, salida esperada y ejemplos de uso.
+Ejemplos prácticos de implementación de estas funciones en diferentes casos de uso.
+Contribuciones
+¡Las contribuciones son bienvenidas! Siéntete libre de sugerir nuevas funciones, realizar mejoras, corregir errores o agregar ejemplos adicionales. Las pautas para contribuir se encuentran en el archivo CONTRIBUTING.md.
