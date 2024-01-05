@@ -7,21 +7,31 @@ una medida comúnmente utilizada para evaluar si una persona tiene un peso salud
 El ejemplo de uso proporciona un peso de 70 kg y una altura de 170 cm, luego llama a la función calcular_IMC 
 con estos valores y muestra el IMC calculado en la consola. """
 
-  def calcular_IMC(peso_kg, altura_cm):
+ def calcular_imc(peso_kg, altura_cm):
+    """
+    Calcula el Índice de Masa Corporal (IMC) a partir del peso en kilogramos y la altura en centímetros.
+
+    Args:
+    peso_kg (float): Peso de la persona en kilogramos.
+    altura_cm (float): Altura de la persona en centímetros.
+
+    Returns:
+    float: Valor del Índice de Masa Corporal (IMC) calculado.
+    """
     # Convertir altura de centímetros a metros
     altura_m = altura_cm / 100
     
-    # Calcular el BMI
-    bmi = peso_kg / (altura_m ** 2)
+    # Calcular el IMC
+    imc = peso_kg / (altura_m ** 2)
     
     # Redondear el resultado a dos decimales
-    bmi = round(bmi, 2)
+    imc = round(imc, 2)
     
-    return bmi
+    return imc
 
 # Ejemplo de uso:
 peso = 70  # Peso en kilogramos
 altura = 170  # Altura en centímetros
 
-resultado = calcular_IMC(peso, altura)
+resultado = calcular_imc(peso, altura)
 print("Tu IMC es:", resultado)
