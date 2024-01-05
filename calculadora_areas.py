@@ -4,19 +4,44 @@ Este repositorio contiene funciones para calcular áreas de figuras geométricas
 
 ## Funciones:
 
-### `calcular_area_cuadrado(lado: float) -> float`
-Esta función calcula el área de un cuadrado dado el valor de un lado.
+import math
 
+def calcular_area_cuadrado(lado: float) -> float:
+    """
+    Calcula el área de un cuadrado dado el valor de un lado.
 
-### `calcular_area_circulo(radio: float) -> float`
-Calcula el área de un círculo dado el valor del radio.
+    Args:
+    lado (float): Longitud del lado del cuadrado.
 
-### `calcular_diferencia(lado: float) -> float`
-Esta función obtiene la diferencia entre el área de un cuadrado y un círculo, donde el cuadrado tiene el lado proporcionado y el círculo tiene la mitad de ese lado como radio.
+    Returns:
+    float: Área del cuadrado.
+    """
+    return lado * lado
 
-## Uso:
-```python
-# Ejemplo de uso
-lado_cuadrado = float(input("Digite el lado del cuadrado: "))
-diferencia = calcular_diferencia(lado_cuadrado)
-print("La diferencia entre el área del cuadrado y el círculo es:", round(diferencia, 2))
+def calcular_area_circulo(radio: float) -> float:
+    """
+    Calcula el área de un círculo dado el valor del radio.
+
+    Args:
+    radio (float): Radio del círculo.
+
+    Returns:
+    float: Área del círculo.
+    """
+    return math.pi * radio ** 2
+
+def calcular_diferencia(lado: float) -> float:
+    """
+    Calcula la diferencia entre el área de un cuadrado y un círculo, 
+    donde el cuadrado tiene el lado proporcionado y el círculo tiene la mitad de ese lado como radio.
+
+    Args:
+    lado (float): Longitud del lado del cuadrado.
+
+    Returns:
+    float: Diferencia entre el área del cuadrado y el círculo.
+    """
+    area_cuadrado = calcular_area_cuadrado(lado)
+    radio_circulo = lado / 2
+    area_circulo = calcular_area_circulo(radio_circulo)
+    return abs(area_cuadrado - area_circulo)
