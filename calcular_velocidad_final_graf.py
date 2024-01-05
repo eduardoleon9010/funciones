@@ -1,15 +1,20 @@
-"""
-Este código generará un gráfico que muestra cómo varía la velocidad final en función del 
-tiempo para diferentes valores de aceleración. Puedes ajustar los valores de aceleración 
-y la velocidad inicial para ver cómo afectan la velocidad final en el tiempo.
-
-"""
-
 import matplotlib.pyplot as plt
 
-# Función para calcular la velocidad final
 def calcular_velocidad_final(velocidad_inicial: float, aceleracion: float, tiempo: float) -> float:
-    return velocidad_inicial + (aceleracion * tiempo)
+    """
+    Calcula la velocidad final en función de la velocidad inicial, la aceleración y el tiempo.
+
+    Parámetros:
+    - velocidad_inicial (float): La velocidad inicial.
+    - aceleracion (float): La aceleración aplicada.
+    - tiempo (float): El tiempo transcurrido.
+
+    Returns:
+    float: La velocidad final calculada.
+    """
+    resultado = velocidad_inicial + (aceleracion * tiempo)
+    print(f"La velocidad final para la aceleración {aceleracion} en el tiempo {tiempo} es: {resultado}")
+    return resultado
 
 # Valores iniciales para la velocidad y el tiempo
 velocidad_inicial = 32.2  # Ejemplo de una velocidad inicial específica
@@ -31,3 +36,4 @@ plt.title('Variación de la velocidad final en función del tiempo y la acelerac
 plt.legend()
 plt.grid(True)
 plt.show()
+
