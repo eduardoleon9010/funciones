@@ -7,6 +7,7 @@ Este repositorio contiene funciones para calcular áreas de figuras geométricas
 ### `calcular_area_cuadrado(lado: float) -> float`
 Esta función calcula el área de un cuadrado dado el valor de un lado.
 
+
 ### `calcular_area_circulo(radio: float) -> float`
 Calcula el área de un círculo dado el valor del radio.
 
