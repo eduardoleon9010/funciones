@@ -1,60 +1,69 @@
-"""Esta función, junto con los ejemplos proporcionados, demuestra el uso de funciones en Python.
-cuadrado(x: float) -> float: Esta función calcula el cuadrado de un número dado. Toma un parámetro 
-x y devuelve x ** 2, es decir, x elevado al cuadrado.
-El programa principal (código que no está dentro de funciones) muestra cómo usar estas funciones:
-print(cuadrado(2)): Calcula el cuadrado de 2 y muestra el resultado (4).
-a = 1 + cuadrado(3): Calcula el cuadrado de 3, le suma 1 y asigna el resultado a a (10).
-print(cuadrado(a*3)): Calcula el cuadrado de a multiplicado por 3 (100).
-Luego, la función cubo(x: float) -> float calcula el cubo de un número dado y se demuestra su uso 
-imprimiendo el resultado del cubo de 2.
-La función area_rectangulo(altura: float, ancho: float) -> float calcula el área de un rectángulo 
-dada su altura y ancho. Solicita al usuario que ingrese la altura y el ancho y luego imprime el 
-área del rectángulo con esos valores.
-Finalmente, la función leer_entero() -> int solicita al usuario que ingrese un número entero y 
-devuelve ese número.
-Estos ejemplos muestran cómo definir funciones, usar parámetros, invocar funciones con argumentos 
-y manejar valores de retorno."""
-
-def cuadrado(x: float)->float:
-    return x**2
-
+def cuadrado(x: float) -> float:
     """
-        Calcula el cuadrado de un nuemero dado
+    Calcula el cuadrado de un número dado.
+
+    Parámetros:
+    x (float): El número del cual se desea calcular el cuadrado.
+
+    Retorna:
+    (float): El cuadrado del número proporcionado.
     """
     return x ** 2
 
-#Programa principal
-print(cuadrado(2))   #Argumento es el valor que damos al parametro cuando llamamos la funcion
-a = 1 + cuadrado(3)  #En este caso los argumentos de los parametros son 2, 3, y dado que a tiene el valor 10 el ultimo valor es 30
-print(cuadrado(a*3))    
 
-#Funciones diferentes son independientes
-def cubo(x: float)->float: #Las dos funciones reciben un parametro cada una. Puede tener el mimo nombre, son parametros DIFERENTES porque estan en funciones diferentes
-    return x*x*x
-y = 2                   #y, es una variable que guarda el valor 2
-print(cubo(y))
+# Programa principal
+print(cuadrado(2))  # Calcula el cuadrado de 2 y muestra el resultado (4)
+a = 1 + cuadrado(3)  # Calcula el cuadrado de 3, le suma 1 y asigna el resultado a 'a' (10)
+print(cuadrado(a * 3))  # Calcula el cuadrado de 'a' multiplicado por 3 (100)
 
-"""
-El parametro de la funcion es (x), pero el argunmento con el que se invoca
-es el valor de la variable (y). Lo que importa en el llamado es el VALOR 
-"""
 
-def area_rectangulo(altura: float, ancho: float)->float:
+def cubo(x: float) -> float:
+    """
+    Calcula el cubo de un número dado.
+
+    Parámetros:
+    x (float): El número del cual se desea calcular el cubo.
+
+    Retorna:
+    (float): El cubo del número proporcionado.
+    """
+    return x * x * x
+
+
+y = 2
+print(cubo(y))  # Imprime el resultado del cubo de 2
+
+
+def area_rectangulo(altura: float, ancho: float) -> float:
+    """
+    Calcula el área de un rectángulo dada su altura y ancho.
+
+    Parámetros:
+    altura (float): La altura del rectángulo.
+    ancho (float): El ancho del rectángulo.
+
+    Retorna:
+    (float): El área del rectángulo con los valores proporcionados.
+    """
     return altura * ancho
 
-x = float(input("Digita la altura: "))
+
+x = float(input("Digite la altura: "))
 y = float(input("Digite el ancho: "))
 area = area_rectangulo(x, y)
-print("El area del rectangulo es: ", area)
+print("El área del rectángulo es:", area)
 
 
-def area_rectangulo_2(altura: float, ancho: float)->float:
-    area = altura * ancho
-    return area
+def leer_entero() -> int:
+    """
+    Solicita al usuario que ingrese un número entero y lo devuelve.
 
+    Retorna:
+    (int): El número entero ingresado por el usuario.
+    """
+    return int(input("Introduce un número entero: "))
 
-def leer_entero()->int:
-    return int(input())
 
 a = leer_entero()
-print("El entero que tecleo es: ", str(a))
+print("El entero que ingresaste es:", a)
+
