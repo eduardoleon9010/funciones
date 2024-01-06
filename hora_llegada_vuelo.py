@@ -1,40 +1,19 @@
-"""Hora de llegada de vuelo
-Una agencia de viajes necesita informar a sus clientes la hora de llegada de 
-sus vuelos. Se conoce la hora de partida del vuelo (en horas, minutos y 
-                                                    segundos) y la duración 
-del vuelo (en horas, minutos y segundos).
-
-Cree una función que retorne la hora de llegada del vuelo en una cadena con
- el formato “HH:mm:ss” donde HH es la hora, mm los minutos y ss los segundos
- de la hora de llegada del vuelo. 
-
-La hora está dada en formato de 24 horas. Si alguno de los 3 números de la 
-respuesta es menor a 10, sólo se necesita un dígito ('7' en lugar de '07').
-
-La solución tiene una función de acuerdo con la siguiente especificación:
-
-Nombre de la función: calcular_horario_llegada
-
-Descripción de parámetros:
-
-Nombre               Tipo      Descripción
-hora_salida           int      Hora de salida del vuelo (valor entre 0 y 23).
-minuto_salida         int      Minuto de salida del vuelo (valor entre 0 y 59).
-segundo_salida        int      Segundo de salida del vuelo (valor entre 0 y 59).
-duracion_horas        int      Número de horas que dura el vuelo.
-duracion_minutos      int      Número de minutos (adicionales al número de horas) que dura el vuelo.
-duracion_segundos     int      Número de segundos (adicionales al número de horas y minutos) que dura el vuelo.
-
-Descripción del retorno:
-
-Tipo: str
-
-Descripción:
-Cadena que indica la hora de llegada del vuelo a su destino, la cadena debe 
-estar en el formato “HH:mm:ss”.
-"""
-
 def calcular_horario_llegada(hora_salida, minuto_salida, segundo_salida, duracion_horas, duracion_minutos, duracion_segundos):
+    """
+    Calcula la hora de llegada del vuelo a su destino.
+
+    Parámetros:
+    hora_salida (int): Hora de salida del vuelo (valor entre 0 y 23).
+    minuto_salida (int): Minuto de salida del vuelo (valor entre 0 y 59).
+    segundo_salida (int): Segundo de salida del vuelo (valor entre 0 y 59).
+    duracion_horas (int): Número de horas que dura el vuelo.
+    duracion_minutos (int): Número de minutos (adicionales al número de horas) que dura el vuelo.
+    duracion_segundos (int): Número de segundos (adicionales al número de horas y minutos) que dura el vuelo.
+
+    Retorna:
+    str: Cadena que indica la hora de llegada del vuelo a su destino, en formato “HH:mm:ss”.
+    """
+
     # Convertir la hora de salida a segundos
     tiempo_salida = hora_salida * 3600 + minuto_salida * 60 + segundo_salida
 
