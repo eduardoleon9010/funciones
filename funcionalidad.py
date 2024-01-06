@@ -1,19 +1,6 @@
-"""Estos ejemplos ilustran el uso de varias funciones en Python:
-
-Funciones Matemáticas:
-Valor absoluto: abs(numero) devuelve el valor absoluto de un número.
-Redondeo: round(decimal, 2) redondea un número decimal a dos decimales.
-Mínimo y Máximo: min(numeros) y max(numeros) encuentran el valor mínimo y máximo en una lista.
-Funciones de Cadenas:
-Longitud de una cadena: len(texto) devuelve la longitud de una cadena.
-Convertir a Mayúsculas y Minúsculas: texto.upper() y texto.lower() convierten cadenas a mayúsculas y minúsculas.
-Funciones de Entrada/Salida:
-Entrada del usuario: input("¿Cuál es tu nombre? ") solicita al usuario una entrada.
-Salida en consola: print("Mensaje") muestra un mensaje en la consola.
-Conversión de tipo: float(entrada) convierte una entrada a un número decimal para realizar operaciones matemáticas.
-Adicionalmente, se muestra cómo calcular el volumen de una esfera utilizando la entrada del usuario y la conversión 
-  de tipos para realizar la operación matemática."""
-
+"""Esta documentación explica cada ejemplo, describe la funcionalidad y cómo interactúa con el 
+usuario para realizar operaciones matemáticas, manipulación de cadenas y manejo de entrada/salida.
+"""
 # Ejemplo 1: Valor absoluto
 numero = -5
 valor_absoluto = abs(numero)  # Devuelve el valor absoluto de -5
@@ -55,11 +42,12 @@ entrada = input("Ingresa un número: ")
 numero = float(entrada)  # Convierte la entrada a un número decimal
 print(numero * 2)  # Realiza una operación matemática
 
-# Conversion de str a decimal
+# Calculo del volumen de una esfera usando entrada y conversión de tipos
 cadena = input("Teclee el radio de la esfera: ")
 radio = float(cadena)
 volumen = 4/3 * 3.1416 * radio ** 3
- 
-print("El volumen de la esfera es: ", 4/3 * 3.1416 * radio ** 3)
+print("El volumen de la esfera es:", volumen)
 
-print("El volumen de la esfera es: ", 4/3 * 3.1416 * float(input("Cual es el radios?")) ** 3)
+# Versión más compacta usando directamente la conversión de tipos dentro de la fórmula
+volumen = 4/3 * 3.1416 * float(input("¿Cuál es el radio?")) ** 3
+print("El volumen de la esfera es:", volumen)
