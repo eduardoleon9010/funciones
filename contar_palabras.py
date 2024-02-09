@@ -1,29 +1,40 @@
 # -*- coding: utf-8 -*-
 """
-Created on Mon Jan 22 12:14:27 2024
+Created on Thu Feb  8 08:12:47 2024
 
 @author: USUARIO
 """
 
-def contar_palabras(cadena: str) -> int:
+def contar_palabras(cadena: str) -> list:
     """
-    Cuenta las palabras que aparecen en una cadena de caracteres.
+    Cuenta la frecuencia de cada palabra en una cadena y devuelve una lista de tuplas
+    donde cada tupla contiene la palabra y su frecuencia en la cadena.
 
-    Parámetros:
-    - cadena (str): La cadena de caracteres que se va a analizar.
+    Args:
+    cadena (str): La cadena de caracteres a analizar.
 
-    Retorna:
-    - int: El número de palabras en la cadena.
+    Returns:
+    list: Una lista de tuplas donde cada tupla contiene una palabra y su frecuencia.
     """
-
+    # Dividir la cadena en palabras
     palabras = cadena.split()
-    return len(palabras)
+    
+    # Crear un diccionario para almacenar la frecuencia de cada palabra
+    frecuencia_palabras = {}
+    
+    # Contar la frecuencia de cada palabra
+    for palabra in palabras:
+        if palabra in frecuencia_palabras:
+            frecuencia_palabras[palabra] += 1
+        else:
+            frecuencia_palabras[palabra] = 1
+    
+    # Crear una lista de tuplas con la palabra y su frecuencia
+    lista_palabras_frecuencia = [(palabra, frecuencia) for palabra, frecuencia in frecuencia_palabras.items()]
+    
+    return lista_palabras_frecuencia
 
-# Uso de la funcion
-cadena_ejemplo_1 = "Hola, esto es una prueba."
-resultado_1 = contar_palabras(cadena_ejemplo_1)
-print(f'Número de palabras en "{cadena_ejemplo_1}": {resultado_1}')
-
-cadena_ejemplo_2 = "Python es un lenguaje de programación poderoso."
-resultado_2 = contar_palabras(cadena_ejemplo_2)
-print(f'Número de palabras en "{cadena_ejemplo_2}": {resultado_2}')
+# Ejemplo de uso
+cadena_ejemplo = "esto es un ejemplo de cadena de texto para contar palabras ejemplo ejemplo"
+resultado = contar_palabras(cadena_ejemplo)
+print("Lista de palabras y su frecuencia:", resultado)
